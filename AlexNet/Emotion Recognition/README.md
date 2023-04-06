@@ -12,9 +12,9 @@ We will be using the [FER2013 dataset](https://www.kaggle.com/c/challenges-in-re
 
 We trained AlexNet on the FER2013 dataset using TensorFlow and achieved an accuracy of 85% on the test set. Some example images and their predicted emotions are shown below:
 
-<img src="https://i.imgur.com/pa8kO5F.png" alt="Happy Example" width="250"/>
+<img src="https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg" alt="Happy Example" width="250"/>
 
-<img src="https://i.imgur.com/6UW0mko.png" alt="Sad Example" width="250"/>
+<img src="https://sa1s3optim.patientpop.com/assets/images/provider/photos/2197018.jpg" alt="Sad Example" width="250"/>
 
 ## Applications
 
