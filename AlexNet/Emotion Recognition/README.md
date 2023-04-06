@@ -4,11 +4,11 @@ Emotion recognition technology can be used to gain valuable insights into consum
 
 ## Dataset
 
-For this project, we collected our own dataset by searching the internet for images of people with happy or sad facial expressions. We manually filtered and labeled the images and organized them into two folders: train and validation. The train folder contains two thirds of the data and the validation folder contains the remaining one third. The images are grayscale and are of size 48x48 pixels.
+For this project, we collected our own dataset by searching the internet for images of people with happy or sad facial expressions. We manually filtered and labeled the images and organized them into two folders: train and validation. The train folder contains two thirds of the data and the validation folder contains the remaining one third. The images are both grayscale and colored.
 
 ## Results
 
-We trained AlexNet on our custom dataset using TensorFlow and achieved an accuracy of 92% on the test set. Some example images and their predicted emotions are shown below:
+We trained AlexNet on our custom dataset and achieved an accuracy of 92% on the test set. Some example images and their predicted emotions are shown below:
 
 <img src="https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg" alt="Happy Example" width="250"/>  |  Predicted category: Happy
 :-------------------------:|:-------------------------:
