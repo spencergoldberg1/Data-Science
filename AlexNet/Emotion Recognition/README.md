@@ -22,12 +22,6 @@ Emotion recognition has many potential applications in the field of commerce and
 
 In addition, emotion recognition could also have economic implications. For example, it could be used to detect fraud by analyzing a person's facial expressions during a financial transaction. If the person appears nervous or anxious, this could be a sign of deception.
 
-## Getting Started
-
-To use this code, you will need to install TensorFlow and the FER2013 dataset. You can find instructions for installing TensorFlow [here](https://www.tensorflow.org/install) and download the FER2013 dataset from [Kaggle](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data).
-
-Once you have installed TensorFlow and downloaded the dataset, you can run the code using the `emotion_recognition.py` script. This script will train the AlexNet model on the FER2013 dataset and save the trained model to disk. You can then use the model to make predictions on new images.
-
 ## Contributing
 
 If you find any issues or have suggestions for improvements, feel free to create a pull request or submit an issue in the repository. We welcome contributions from the community.
