@@ -8,7 +8,7 @@ For this project, we collected our own dataset by searching the internet for ima
 
 ## Results
 
-We trained AlexNet on our custom dataset using TensorFlow and achieved an accuracy of 85% on the test set. Some example images and their predicted emotions are shown below:
+We trained AlexNet on our custom dataset using TensorFlow and achieved an accuracy of 92% on the test set. Some example images and their predicted emotions are shown below:
 
 <img src="https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg" alt="Happy Example" width="250"/>  |  Predicted category: Happy
 :-------------------------:|:-------------------------:
