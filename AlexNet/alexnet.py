@@ -3,7 +3,7 @@ import requests
 from io import BytesIO
 from tkinter import Tk, filedialog
 from tqdm import tqdm
-
+import random
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -11,6 +11,7 @@ import torchvision.models as models
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 from PIL import Image
+import shutil
 
 
 # Define the data transformation pipeline
@@ -27,12 +28,84 @@ Tk().withdraw()
 data_dir = filedialog.askdirectory(title="Select the data directory")
 model_path = os.path.join(data_dir, "alexnet_custom_model.pt")
 
+def create_train_test_folders(root_folder, split_percentage):
+    # Get a list of subdirectories in root_folder
+    class_names = [name for name in os.listdir(root_folder) if not name.startswith('.') and os.path.isdir(os.path.join(root_folder, name))]
+
+    # Make train and valid directories in root_folder
+    train_dir = os.path.join(root_folder, 'train')
+    os.makedirs(train_dir, exist_ok=True)
+    valid_dir = os.path.join(root_folder, 'valid')
+    os.makedirs(valid_dir, exist_ok=True)
+
+    # Iterate over class_names and create train and valid directories for each
+    for class_name in class_names:
+        class_train_dir = os.path.join(train_dir, class_name)
+        os.makedirs(class_train_dir, exist_ok=True)
+        class_valid_dir = os.path.join(valid_dir, class_name)
+        os.makedirs(class_valid_dir, exist_ok=True)
+
+        # Get a list of all files in the class_name directory (excluding directories)
+        class_dir = os.path.join(root_folder, class_name)
+        all_files = [name for name in os.listdir(class_dir) if
+                     not name.startswith('.') and os.path.isfile(os.path.join(class_dir, name))]
+
+        # Shuffle the list of files and split them based on the split_percentage
+        random.shuffle(all_files)
+        split_index = int(len(all_files) * split_percentage)
+        train_files = all_files[:split_index]
+        valid_files = all_files[split_index:]
+
+        # Move the files to their respective train and valid directories
+        for train_file in train_files:
+            src_file = os.path.join(class_dir, train_file)
+            dst_file = os.path.join(class_train_dir, train_file)
+            shutil.copy(src_file, dst_file)
+        for valid_file in valid_files:
+            src_file = os.path.join(class_dir, valid_file)
+            dst_file = os.path.join(class_valid_dir, valid_file)
+            shutil.copy(src_file, dst_file)
+
 def classify():
     model = torch.load(model_path)
     model.to(device)
     train_dir = os.path.join(data_dir, 'train')
     train_dataset = datasets.ImageFolder(train_dir, transform=transform)
     classify_image(model, train_dataset, device)
+
+
+def classify_image(model, train_dataset, device):
+    # Ask the user if they want to enter a URL or pick an image file from the computer
+    print("How do you want to select the image to classify?")
+    print("1. Enter URL")
+    print("2. Pick from computer")
+    choice = input("Enter your choice: ")
+
+    # Load and preprocess the image
+    if choice == "1":
+        image_path = input("Enter the URL of the image: ")
+        img_batch = load_image(image_path, url=True, transform=transform)
+    elif choice == "2":
+        Tk().withdraw()
+        image_path = filedialog.askopenfilename(title="Select the image to classify", filetypes=(("JPEG files", "*.jpg"), ("PNG files", "*.png"), ("All files", "*.*")))
+        if not image_path:
+            print("No image selected.")
+            return
+        img_batch = load_image(image_path, transform=transform)
+    else:
+        print("Invalid choice.")
+        return
+
+    # Classify the image
+    with torch.no_grad():
+        outputs = model(img_batch)
+        _, predicted = torch.max(outputs.data, 1)
+
+    # Print the predicted class label
+    # Print out the class names
+    class_names = train_dataset.classes
+    print("Classes found:", class_names)
+    print(f"Predicted class: {class_names[predicted.item()]}")
 
 def load_image(image_path, url=False, transform=None):
     if url:
@@ -50,44 +123,15 @@ def load_image(image_path, url=False, transform=None):
         img_batch = img_batch.to(device)
     return img_batch
 
-
-def classify_image(model, train_dataset, device):
-    # Prompt the user to select the image to classify
-    Tk().withdraw()
-    image_path = filedialog.askopenfilename(title="Select the image to classify", filetypes=(("JPEG files", "*.jpg"), ("PNG files", "*.png"), ("All files", "*.*")))
-    if not image_path:
-        print("No image selected.")
-        return
-
-    # Load and preprocess the image
-    img_batch = load_image(image_path, transform=transform)
-
-    # Classify the image
-    with torch.no_grad():
-        outputs = model(img_batch)
-        _, predicted = torch.max(outputs.data, 1)
-
-    # Print the predicted class label
-    # Print out the class names
-    class_names = train_dataset.classes
-    print("Classes found:", class_names)
-    print(f"Predicted class: {class_names[predicted.item()]}")
-
-def prepare_data(data_dir, split_ratio):
-    # Split the data into train and validation sets
-    train_dir = os.path.join(data_dir, 'train')
-    valid_dir = os.path.join(data_dir, 'valid')
-    if not os.path.exists(train_dir) or not os.path.exists(valid_dir):
-        datasets.ImageFolder(data_dir, transform=transform).split_folder(split_ratio)
-    return train_dir, valid_dir
-
-
 def train_model(data_dir, device):
     # Load the pretrained AlexNet model
     model = models.alexnet(pretrained=True)
 
     # Load the custom dataset
     train_dir = os.path.join(data_dir, 'train')
+    if not os.path.exists(train_dir):
+        split = float(input("Enter the split percentage for the data (train/test): "))
+        create_train_test_folders(data_dir, split / 100)
     train_dataset = datasets.ImageFolder(train_dir, transform=transform)
 
     # Update the last fully connected layer to match the number of classes in the custom dataset
@@ -106,13 +150,9 @@ def train_model(data_dir, device):
     # Define the file path for the saved model
     model_path = os.path.join(data_dir, "alexnet_custom_model.pt")
 
-    # Always train a new model and overwrite the old one if it exists
-    folder_setup = input("Is the folder setup with 'train' and 'valid' folders? (y/n): ")
-    if folder_setup.lower() != 'y':
-        split_ratio = int(input("Enter the train/valid split percentage (e.g., 80 for 80/20 split): "))
-        train_dir, valid_dir = prepare_data(data_dir, split_ratio)
-    else:
-        valid_dir = os.path.join(data_dir, 'valid')
+    valid_dir = os.path.join(data_dir, 'valid')
+    if not os.path.exists(valid_dir):
+        create_train_test_folders(data_dir, 0.8)
 
     # Load the validation dataset
     valid_dataset = datasets.ImageFolder(valid_dir, transform=transform)
@@ -149,7 +189,8 @@ def train_model(data_dir, device):
         torch.save(model, model_path)
 
     print("Model saved successfully!")
-print("Training complete.")
+    print("Training complete.")
+
 
 action = int(input("Select an action:\n1. Train model\n2. Classify image\nEnter action number: "))
 
@@ -157,7 +198,7 @@ if action == 1:
     # Train the model
     train_model(data_dir, device)
     shouldClassify = input("Do you also want to classify a new image? (y/n): ")
-    if shouldClassify:
+    if shouldClassify == "y" or shouldClassify == "Y":
         classify()
 elif action == 2:
     # Classify an image
