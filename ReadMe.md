@@ -39,4 +39,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 [Visit my website](https://www.example.com)
 
-[![Preview of my website](https://via.placeholder.com/400x200.png?text=Click%20to%20visit%20my%20website)](https://www.example.com)
+[![Preview of my website](https://spencergoldberg1.github.io/Portfolio-Website/)
