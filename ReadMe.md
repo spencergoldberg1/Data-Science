@@ -17,7 +17,6 @@ The dataset used for training and testing the model consists of 10,000 labeled i
   <img src="https://media.istockphoto.com/id/1286844087/photo/the-social-media-addiction.jpg?s=612x612&w=0&k=20&c=B4dP-nEIeS1H9IFD5tgEJjQhDnztCvWA0RXfPS9mvRM=" alt="Social Media Addiction" width="300" height="300" style="padding: 0px 20px;">
 </div>
 
-
 ## Model Architecture
 
 The model was implemented using the PyTorch library and the AlexNet architecture, which has been shown to be effective in image classification tasks. The network consists of five convolutional layers and three fully connected layers, with ReLU activation and dropout regularization to prevent overfitting. The model was trained on a GPU for 100 epochs, achieving an accuracy of 98% on the test set.
