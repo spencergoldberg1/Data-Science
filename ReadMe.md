@@ -1,4 +1,4 @@
-![Header]([https://raw.githubusercontent.com/leviarista/github-profile-header-generator/main/social/repo-header-image.png])
+![Header](https://raw.githubusercontent.com/leviarista/github-profile-header-generator/main/social/repo-header-image.png)
 
 
 # Facial Recognition with AlexNet
