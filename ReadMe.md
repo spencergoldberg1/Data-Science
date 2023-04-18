@@ -19,7 +19,7 @@ The project was developed as part of a data science class to explore deep learni
 The dataset used for training and testing the model consists of 10,000 labeled images of faces displaying happy or sad expressions. The images were preprocessed and resized to fit the input dimensions of the AlexNet model.
 
 <img src="https://community.thriveglobal.com/wp-content/uploads/2018/01/Happy_guy.jpg?text=Happy" alt="Happy Face">
-<img src="https://via.placeholder.com/150x150.png?text=Sad" alt="Sad Face">
+<img src="[https://via.placeholder.com/150x150.png](https://img.freepik.com/premium-photo/sad-thoughtful-asian-man-pensive-mood-with-wondering-thinking-gesture_665594-800.jpg)?text=Sad" alt="Sad Face">
 
 ## Model Architecture
 
