@@ -63,14 +63,3 @@ Facial recognition has become increasingly important in various fields, from com
 - `--train`: Train the model using the specified dataset.
 - `--classify`: Classify a new image using the trained model.
 
-## Acknowledgments
-
-Thanks to the PyTorch team for providing the pre-trained AlexNet model, and to the creators of the FER-2013 dataset for providing the dataset used in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## References
-
-Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). Imagenet classification with deep convolutional neural networks. In Advances in neural information processing systems (pp. 1097-1105).
