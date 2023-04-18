@@ -37,9 +37,9 @@ To use the facial recognition model, you can load the trained model in Python an
 
 The model achieved an accuracy of 98% on the test set, demonstrating its effectiveness in recognizing human emotions. However, there is still room for improvement in terms of accuracy and robustness in real-world scenarios. Future work could involve expanding the dataset to include additional emotions, refining the model architecture to improve accuracy, and testing the model in real-world scenarios.
 
-## Python Script
+## The Model
 
-The Python script used to train the model and classify images using AlexNet is available in the [repo](https://github.com/spencergoldberg1/FaceSense/blob/main/FaceSense.ipynb).
+The Python script used to train the model and classify images using AlexNet is available in the [here] (https://github.com/spencergoldberg1/FaceSense/blob/main/FaceSense.ipynb) and the instructions to run it can be found [here](https://github.com/spencergoldberg1/FaceSense/blob/main/FaceSense.ipynb).
 
 ## Learn More
 
