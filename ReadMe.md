@@ -1,4 +1,4 @@
-![Header](images/FaceSence)
+![Header](FaceSense)
 
 
 # Facial Recognition with AlexNet
