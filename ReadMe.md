@@ -12,10 +12,11 @@ The motivation for this project was to explore the potential of deep learning te
 
 The dataset used for training and testing the model consists of 10,000 labeled images of faces displaying happy or sad expressions. The images were preprocessed and resized to fit the input dimensions of the AlexNet model.
 
-<div style="display:flex; justify-content: space-around; align-items: center;">
-  <img src="https://community.thriveglobal.com/wp-content/uploads/2018/01/Happy_guy.jpg?text=Happy" alt="Happy Face" width="300" height="300" style="padding: 50px 20px;">
-  <img src="https://media.istockphoto.com/id/1286844087/photo/the-social-media-addiction.jpg?s=612x612&w=0&k=20&c=B4dP-nEIeS1H9IFD5tgEJjQhDnztCvWA0RXfPS9mvRM=" alt="Social Media Addiction" width="300" height="300" style="padding: 50px 20px;">
+<div style="display:flex; justify-content:center; align-items:center; padding: 50px;">
+  <img src="https://community.thriveglobal.com/wp-content/uploads/2018/01/Happy_guy.jpg?text=Happy" alt="Happy Face" width="300" height="300" style="padding: 0px 20px;">
+  <img src="https://media.istockphoto.com/id/1286844087/photo/the-social-media-addiction.jpg?s=612x612&w=0&k=20&c=B4dP-nEIeS1H9IFD5tgEJjQhDnztCvWA0RXfPS9mvRM=" alt="Social Media Addiction" width="300" height="300" style="padding: 0px 20px;">
 </div>
+
 
 ## Model Architecture
 
