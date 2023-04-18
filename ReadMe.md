@@ -40,9 +40,6 @@ The model achieved an accuracy of 98% on the test set, demonstrating its effecti
 
 Thanks to our instructor and classmates for their feedback and support throughout the project.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
