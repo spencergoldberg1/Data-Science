@@ -1,6 +1,6 @@
 # Facial Recognition with AlexNet
 
-<a href="https://github.com/spencergoldberg1/Data-Science/blob/develop/AlexNet/alexnet.py"><img src="https://img.shields.io/badge/Facial%20Recognition-Model-blue.svg" alt="Facial Recognition"></a>
+<a href="https://github.com/spencergoldberg1/Data-Science/blob/develop/AlexNet/alexnet.py"><img src="https://img.shields.io/badge/Facial%20Recognition-Model-blue.svg" alt="Alexnet"></a>
 
 
 
