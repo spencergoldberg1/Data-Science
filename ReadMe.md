@@ -1,6 +1,6 @@
 # Facial Recognition with AlexNet
 
-<a href="[https://github.com/username/repo/blob/main/alexnet_model.py](https://github.com/spencergoldberg1/Data-Science/blob/develop/AlexNet/alexnet.py)"><img src="https://img.shields.io/badge/Facial%20Recognition-AlexNet-blue.svg" alt="Facial Recognition"></a>
+<a href="[https://github.com/username/repo/blob/main/alexnet_model.py]([https://github.com/spencergoldberg1/Data-Science/blob/develop/AlexNet/alexnet.py](https://github.com/spencergoldberg1/Data-Science/blob/develop/AlexNet/alexnet.py))"><img src="https://img.shields.io/badge/Facial%20Recognition-AlexNet-blue.svg" alt="Facial Recognition"></a>
 
 
 Facial recognition has become an increasingly popular field of study in recent years, with potential applications in a wide range of fields from commerce to marketing. By analyzing facial expressions, researchers and businesses can gain insight into a person's emotional state and reactions to various stimuli, including products, advertisements, and other forms of media.
