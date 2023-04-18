@@ -6,7 +6,8 @@
 
 Facial recognition has become an increasingly popular field of study in recent years, with potential applications in a wide range of fields from commerce to marketing. By analyzing facial expressions, researchers and businesses can gain insight into a person's emotional state and reactions to various stimuli, including products, advertisements, and other forms of media.
 
-![Facial recognition transforming retail by enhancing in-store customer experience, improving retailers’ operational efficiency](https://www.einfochips.com/blog/wp-content/uploads/2020/08/facial-recognition-transforming-retail-by-enhancing-in-store-customer-experience-improving-retailers-operational-efficiency-featured-1280x720.jpg)
+<img src="https://www.einfochips.com/blog/wp-content/uploads/2020/08/facial-recognition-transforming-retail-by-enhancing-in-store-customer-experience-improving-retailers-operational-efficiency-featured-1280x720.jpg" alt="Facial recognition transforming retail by enhancing in-store customer experience, improving retailers’ operational efficiency">
+
 
 
 The goal of this project was to develop a facial recognition model using the AlexNet architecture to accurately identify human emotions in real-time applications. Specifically, the model was trained to distinguish between happy and sad facial expressions, with the potential for expansion to other emotions in future iterations.
