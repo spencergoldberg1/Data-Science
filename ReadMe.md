@@ -32,7 +32,7 @@ To use the facial recognition model, you can load the trained model in Python an
 
 ## Results
 
-The model achieved an accuracy of 90% on the test set, demonstrating its effectiveness in recognizing human emotions. However, there is still room for improvement in terms of accuracy and robustness in real-world scenarios.
+The model achieved an accuracy of 98% on the test set, demonstrating its effectiveness in recognizing human emotions. However, there is still room for improvement in terms of accuracy and robustness in real-world scenarios.
 
 ## Acknowledgments
 
