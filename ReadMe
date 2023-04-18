@@ -23,17 +23,3 @@ The model was implemented using the PyTorch library and the AlexNet architecture
 
 To use the facial recognition model, you can run the `predict.py` script with an input image file. The script will output a predicted emotion label (happy or sad) and the confidence score.
 
-python predict.py --image input.jpg
-
-## Results
-
-The model achieved an accuracy of 90% on the test set, demonstrating its effectiveness in recognizing human emotions. However, there is still room for improvement in terms of accuracy and robustness in real-world scenarios.
-
-## Acknowledgments
-
-Thanks to our instructor and classmates for their feedback and support throughout the project.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-In this example, I've used the # command to create headings and the img src command to add images to the readme file. The alt attribute is used to provide alternative text for the images in case they cannot be displayed. You can replace the image URLs with actual images once you have them.
