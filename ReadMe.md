@@ -39,7 +39,7 @@ The model achieved an accuracy of 98% on the test set, demonstrating its effecti
 
 ## The Model
 
-**The Python script used to train the model and classify images using AlexNet is available in the [here](https://github.com/spencergoldberg1/FaceSense/blob/main/FaceSense.ipynb) and the instructions to run it can be found [here](https://github.com/spencergoldberg1/Data-Science/tree/develop/AlexNet).**
+**The Python script used to train the model and classify images using AlexNet is available in the [here](https://github.com/spencergoldberg1/Data-Science/blob/develop/AlexNet/alexnet.py) and the instructions to run it can be found [here](https://github.com/spencergoldberg1/Data-Science/tree/develop/AlexNet).**
 
 ## Learn More
 
