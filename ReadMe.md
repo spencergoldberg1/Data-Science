@@ -1,6 +1,5 @@
 # Facial Recognition with AlexNet
 
-
 <img src="https://img.shields.io/badge/Facial%20Recognition-AlexNet-blue.svg" alt="Facial Recognition">
 
 This repository contains the code and dataset used to build a facial recognition model using AlexNet. The model is trained to recognize emotions and distinguish between happy and sad facial expressions.
@@ -22,4 +21,16 @@ The model was implemented using the PyTorch library and the AlexNet architecture
 
 ## Usage
 
-To use the facial recognition model, you can run the `predict.py` script with an input image file. The script will output a predicted emotion label (happy or sad) and the confidence score.
+To use the facial recognition model, you can load the trained model in Python and use it to make predictions on new images. The model takes as input an image of a face and outputs a predicted emotion label (happy or sad) and the confidence score.
+
+## Results
+
+The model achieved an accuracy of 90% on the test set, demonstrating its effectiveness in recognizing human emotions. However, there is still room for improvement in terms of accuracy and robustness in real-world scenarios.
+
+## Acknowledgments
+
+Thanks to our instructor and classmates for their feedback and support throughout the project.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
