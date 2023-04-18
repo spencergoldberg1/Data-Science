@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="FaceSense.png" alt="FaceSense" width="500" height="500">
-</p>
+![FaceSence](FaceSense.png)
 
 # FaceSense - Facial Recognition with AlexNet
 
