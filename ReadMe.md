@@ -2,7 +2,7 @@
 
 
 
-# Facial Recognition with AlexNet
+# FaceSense - Facial Recognition with AlexNet
 
 Facial recognition has become an increasingly popular field of study in recent years, with potential applications in a wide range of fields from commerce to marketing. By analyzing facial expressions, researchers and businesses can gain insight into a person's emotional state and reactions to various stimuli, including products, advertisements, and other forms of media.
 
