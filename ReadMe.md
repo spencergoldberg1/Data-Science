@@ -37,6 +37,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-[Visit my website](https://www.example.com)
+[Visit my portfolio website](https://spencergoldberg1.github.io/Portfolio-Website/)
 
-[![Preview of my website](https://spencergoldberg1.github.io/Portfolio-Website/)
+[![Preview of my portfolio website](https://raw.githubusercontent.com/spencergoldberg1/Portfolio-Website/main/assets/img/readme-preview.png)](https://spencergoldberg1.github.io/Portfolio-Website/)
