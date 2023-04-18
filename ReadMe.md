@@ -2,11 +2,15 @@
 
 <img src="https://img.shields.io/badge/Facial%20Recognition-AlexNet-blue.svg" alt="Facial Recognition">
 
-This repository contains the code and dataset used to build a facial recognition model using AlexNet. The model is trained to recognize emotions and distinguish between happy and sad facial expressions.
+Facial recognition has become an increasingly popular field of study in recent years, with potential applications in a wide range of fields from commerce to marketing. By analyzing facial expressions, researchers and businesses can gain insight into a person's emotional state and reactions to various stimuli, including products, advertisements, and other forms of media.
+
+![Facial Recognition in Marketing](https://cdn.pixabay.com/photo/2018/04/03/17/09/facial-recognition-3281064_1280.jpg)
+
+The goal of this project was to develop a facial recognition model using the AlexNet architecture to accurately identify human emotions in real-time applications. Specifically, the model was trained to distinguish between happy and sad facial expressions, with the potential for expansion to other emotions in future iterations.
 
 ## Motivation
 
-The project was developed as part of a data science class to explore deep learning techniques for image recognition. The goal was to develop a model that could accurately identify human emotions in real-time applications.
+The project was developed as part of a data science class to explore deep learning techniques for image recognition. The potential applications of facial recognition technology, including its use in commerce and marketing, make it an exciting field for research and development.
 
 ## Dataset
 
@@ -39,4 +43,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 [Visit my portfolio website](https://spencergoldberg1.github.io/Portfolio-Website/)
 
-[![Preview of my portfolio website](https://raw.githubusercontent.com/spencergoldberg1/Portfolio-Website/main/assets/img/readme-preview.png)](https://spencergoldberg1.github.io/Portfolio-Website/)
+[![Preview of my portfolio website](https://raw.githubusercontent.com/spencergoldberg1/Portfolio-Website/main/src/assets/img/readme-preview.png)](https://spencergoldberg1.github.io/Portfolio-Website/)
