@@ -34,3 +34,9 @@ Thanks to our instructor and classmates for their feedback and support throughou
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+[Visit my website](https://www.example.com)
+
+[![Preview of my website](https://via.placeholder.com/400x200.png?text=Click%20to%20visit%20my%20website)](https://www.example.com)
