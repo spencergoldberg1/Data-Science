@@ -166,10 +166,14 @@ def train_model(data_dir, device):
     # Train the model
     num_epochs = int(input("Enter the number of epochs to train: "))
     print("Training model...")
+    best_model = None
+    best_valid_acc = 0
     for epoch in range(num_epochs):
         epoch_loss = 0
-        correct = 0
-        total = 0
+        train_correct = 0
+        train_total = 0
+        valid_correct = 0
+        valid_total = 0
         for i, (images, labels) in enumerate(tqdm(train_loader, desc=f"Epoch {epoch + 1}/{num_epochs}")):
             optimizer.zero_grad()
             images, labels = images.to(device), labels.to(device)
@@ -180,16 +184,32 @@ def train_model(data_dir, device):
             optimizer.step()
 
             _, predicted = torch.max(outputs.data, 1)
-            total += labels.size(0)
-            correct += (predicted == labels).sum().item()
+            train_total += labels.size(0)
+            train_correct += (predicted == labels).sum().item()
 
         epoch_loss /= len(train_loader)
-        accuracy = correct / total
-        print('Epoch [{}/{}], Loss: {:.4f}, Accuracy: {:.2f}%'.format(epoch + 1, num_epochs, epoch_loss,accuracy * 100))
-        torch.save(model, model_path)
+        train_acc = train_correct / train_total
 
-    print("Model saved successfully!")
-    print("Training complete.")
+        # Evaluate the model on the validation dataset
+        with torch.no_grad():
+            for images, labels in tqdm(valid_loader, desc=f"Validation"):
+                images, labels = images.to(device), labels.to(device)
+                outputs = model(images)
+                _, predicted = torch.max(outputs.data, 1)
+                valid_total += labels.size(0)
+                valid_correct += (predicted == labels).sum().item()
+            valid_acc = valid_correct / valid_total
+
+        print('Epoch [{}/{}], Train Loss: {:.4f}, Train Accuracy: {:.2f}%, Validation Accuracy: {:.2f}%'.format(epoch + 1, num_epochs, epoch_loss, train_acc * 100, valid_acc * 100))
+
+        if valid_acc > best_valid_acc:
+            best_valid_acc = valid_acc
+            best_model = model
+            torch.save(best_model, model_path)
+
+        print("Model saved successfully!")
+        print("Training complete.")
+
 
 
 action = int(input("Select an action:\n1. Train model\n2. Classify image\nEnter action number: "))
