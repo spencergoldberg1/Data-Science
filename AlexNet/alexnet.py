@@ -167,13 +167,13 @@ def train_model(data_dir, device):
     num_epochs = int(input("Enter the number of epochs to train: "))
     print("Training model...")
     best_model = None
-    best_valid_acc = 0
+    best_valid_acc = 0.0
+    start_time = time.time()
     for epoch in range(num_epochs):
         epoch_loss = 0
-        train_correct = 0
-        train_total = 0
-        valid_correct = 0
-        valid_total = 0
+        correct = 0
+        total = 0
+        epoch_start_time = time.time()
         for i, (images, labels) in enumerate(tqdm(train_loader, desc=f"Epoch {epoch + 1}/{num_epochs}")):
             optimizer.zero_grad()
             images, labels = images.to(device), labels.to(device)
@@ -184,31 +184,48 @@ def train_model(data_dir, device):
             optimizer.step()
 
             _, predicted = torch.max(outputs.data, 1)
-            train_total += labels.size(0)
-            train_correct += (predicted == labels).sum().item()
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
 
         epoch_loss /= len(train_loader)
-        train_acc = train_correct / train_total
+        accuracy = correct / total
+        epoch_elapsed_time = time.time() - epoch_start_time
+        print(
+            'Epoch [{}/{}], Training Loss: {:.4f}, Training Accuracy: {:.2f}%, Elapsed Time: {:.2f}s'.format(epoch + 1,
+                                                                                                             num_epochs,
+                                                                                                             epoch_loss,
+                                                                                                             accuracy * 100,
+                                                                                                             epoch_elapsed_time))
 
-        # Evaluate the model on the validation dataset
+        # Evaluate the model on the validation set
+        model.eval()
+        valid_correct = 0
+        valid_total = 0
         with torch.no_grad():
-            for images, labels in tqdm(valid_loader, desc=f"Validation"):
+            for images, labels in valid_loader:
                 images, labels = images.to(device), labels.to(device)
                 outputs = model(images)
                 _, predicted = torch.max(outputs.data, 1)
                 valid_total += labels.size(0)
                 valid_correct += (predicted == labels).sum().item()
             valid_acc = valid_correct / valid_total
+            print('Validation Accuracy: {:.2f}%'.format(valid_acc))
 
-        print('Epoch [{}/{}], Train Loss: {:.4f}, Train Accuracy: {:.2f}%, Validation Accuracy: {:.2f}%'.format(epoch + 1, num_epochs, epoch_loss, train_acc * 100, valid_acc * 100))
-
-        if valid_acc > best_valid_acc:
-            best_valid_acc = valid_acc
-            best_model = model
+            # Check if the current model has the best validation accuracy so far
+            if valid_acc > best_valid_acc:
+                best_valid_acc = valid_acc
+                best_model = model
+                print('Best model updated. Validation Accuracy: {:.2f}%'.format(best_valid_acc))
+        # Save the best model to the file path
+        if best_model is not None:
             torch.save(best_model, model_path)
+        print('Best model saved to: {}'.format(model_path))
 
-        print("Model saved successfully!")
-        print("Training complete.")
+        epoch_elapsed_time = time.time() - epoch_start_time
+        print(f"Epoch training time: {epoch_elapsed_time:.2f} seconds\n")
+
+    elapsed_time = time.time() - start_time
+    print(f"Training complete. Total training time: {elapsed_time:.2f} seconds")
 
 
 
