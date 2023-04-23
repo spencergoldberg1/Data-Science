@@ -1,4 +1,4 @@
-# FaceSense - Facial Recognition with AlexNet
+# FaceSense - Emotion Detection using Alexnet
 <img src="images/FaceSense.png" alt="FaceSense logo">
 Facial recognition technology has numerous potential applications in real-world scenarios, particularly in commerce and marketing. The ability to accurately identify human emotions in real-time applications has significant implications, including in customer experience, healthcare, and security.
 
