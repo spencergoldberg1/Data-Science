@@ -6,7 +6,7 @@ Facial recognition technology has numerous potential applications in real-world 
 The motivation for this project was to explore the potential of deep learning techniques for image recognition, specifically in the field of facial recognition. By accurately identifying human emotions, businesses and researchers can gain insight into a person's emotional state and reactions to various stimuli, including products, advertisements, and other forms of media.
 
 ## Dataset
-The dataset used for training and testing the model consists of 10,000 labeled images of faces displaying happy or sad expressions. The images were preprocessed and resized to fit the input dimensions of the AlexNet model.
+The dataset used for training and testing the model consists of images of happy and sad faces. The classes used were taken from the dataset that can be found [here](https://www.kaggle.com/datasets/chiragsoni/ferdata), and I only used the happy and sad image data for training.
 
 <div style="display:flex; justify-content:center; align-items:center; padding: 50px; margin: 0 auto;">
   <img src="images/happy_face.jpg" alt="Happy Face" width="250" height="250" style="padding: 0px 20px;">
