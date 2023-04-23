@@ -27,7 +27,7 @@ Facial recognition technology can be used in retail to identify customers and tr
 ## Healthcare
 Facial recognition technology can be used to monitor patients in hospitals and clinics. By analyzing facial expressions, healthcare professionals can gain insight into patient well-being and identify potential mental health concerns. For example, a patient who is displaying signs of stress or anxiety could be identified and provided with additional support or resources.
 
-## <img src="https://d3i71xaburhd42.cloudfront.net/26e1cc41b622a49c11b413fce83d8b2169664c0a/4-Figure4-1.png" alt="Healthcare">
+## <img src="https://indatalabs.com/wp-content/uploads/2020/07/facial-recognition-for-healthcare-disruption-1.png" alt="Healthcare">
 
 Security
 Facial recognition technology can be used in security applications to identify individuals and prevent fraud or unauthorized access. For example, facial recognition technology can be used to monitor access to high-security areas in buildings or to prevent identity theft. In airports, facial recognition technology is being used to identify potential security risks and prevent unauthorized individuals from entering restricted areas.
