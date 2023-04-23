@@ -23,6 +23,7 @@ The model achieved an accuracy of 92% on the validation set, demonstrating its e
 
 ## Train New Model
 If you are interested in training your own model on any dataset you like, follow this link [here](https://github.com/spencergoldberg1/FaceSense/blob/develop/Script), and to view the instructions on how to run the python script.
+
 NOTE: Must be in the 'Script' directory to run the python script titled ['alexnet.py'](https://github.com/spencergoldberg1/FaceSense/blob/develop/Script/alexnet.py).
 
 ## Retail
