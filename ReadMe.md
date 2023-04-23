@@ -23,7 +23,7 @@ The model achieved an accuracy of 92% on the validation set, demonstrating its e
 
 ## Train New Model
 If you are interested in training your own model on any dataset you like, follow this link [here](https://github.com/spencergoldberg1/FaceSense/blob/develop/Script), and to view the instructions on how to run the python script.
-### NOTE: Must be in the 'Script' directory to run the python script title ['alexnet.py'](https://github.com/spencergoldberg1/FaceSense/blob/develop/Script/alexnet.py).
+NOTE: Must be in the 'Script' directory to run the python script titled ['alexnet.py'](https://github.com/spencergoldberg1/FaceSense/blob/develop/Script/alexnet.py).
 
 ## Retail
 Facial recognition technology can be used in retail to identify customers and track their behavior in stores. This can provide valuable insights into customer preferences and help businesses improve their marketing and sales strategies. For example, by analyzing customer emotions, retailers can identify which products are resonating with customers and which are not. This information can then be used to make changes to the store layout or product placement to better meet the needs and preferences of customers.
