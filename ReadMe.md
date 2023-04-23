@@ -19,7 +19,10 @@ The dataset used for training and testing the model consists of images of happy 
 The model was implemented using the PyTorch library and the AlexNet architecture, which has been shown to be effective in image classification tasks. The network consists of five convolutional layers and three fully connected layers, with ReLU activation and dropout regularization to prevent overfitting. The model was trained on a GPU for 100 epochs, achieving an accuracy of 98% on the test set.
 
 ## Results and Discussion
-The model achieved an accuracy of 98% on the test set, demonstrating its effectiveness in recognizing human emotions. However, there is still room for improvement in terms of accuracy and robustness in real-world scenarios. Future work could involve expanding the dataset to include additional emotions, refining the model architecture to improve accuracy, and testing the model in real-world scenarios.
+The model achieved an accuracy of 92% on the validation set, demonstrating its effectiveness in recognizing human emotions. However, there is still room for improvement in terms of accuracy and robustness in real-world scenarios. Future work could involve expanding the dataset to include additional emotions, refining the model architecture to improve accuracy, and testing the model in real-world scenarios.
+
+## Train New Model
+If you are interested in training your own model on any dataset you like, follow this link [here](https://www.kaggle.com/datasets/chiragsoni/ferdata), and to view the instructions on how to run the python script.
 
 ## Retail
 Facial recognition technology can be used in retail to identify customers and track their behavior in stores. This can provide valuable insights into customer preferences and help businesses improve their marketing and sales strategies. For example, by analyzing customer emotions, retailers can identify which products are resonating with customers and which are not. This information can then be used to make changes to the store layout or product placement to better meet the needs and preferences of customers.
