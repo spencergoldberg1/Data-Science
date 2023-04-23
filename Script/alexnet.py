@@ -210,7 +210,7 @@ def train_model(data_dir, device):
                 valid_total += labels.size(0)
                 valid_correct += (predicted == labels).sum().item()
             valid_acc = valid_correct / valid_total
-            print('Validation Accuracy: {:.2f}%'.format(valid_acc))
+            print('Validation Accuracy: {:.2f}%'.format(valid_acc * 100))
 
             # Check if the current model has the best validation accuracy so far
             if valid_acc > best_valid_acc:
