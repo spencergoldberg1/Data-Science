@@ -48,7 +48,5 @@ To learn more about this project and my other work, please visit my portfolio we
 Special thanks to the Kaggle community for providing the Facial Expression Recognition Dataset used in this project. Additionally, thanks to the PyTorch team for creating a powerful and easy-to-use deep learning library.
 
 ## About FaceSense
-FaceSense is a company specializing in facial recognition technology for a wide range of industries. Our team is dedicated to developing innovative solutions that improve customer experiences, enhance security, and advance healthcare. Contact us to learn more about our products and services.
+FaceSense is a directed at understanding people and how they interact with the world. Buy understanding someones true emotion, it will help not only in making better product and advertisement reccomendations based on how they are feeling, but can also help the marketers for targeting their ads to the desired audience. 
 
-## Disclaimer
-This project is for educational purposes only and should not be used for any commercial or non-educational purpose. The facial recognition technology implemented in this project has the potential to be used in unethical ways and may violate privacy laws. The author of this project and the company FaceSense assume no responsibility for any misuse or unethical use of this technology.
