@@ -41,7 +41,7 @@ Facial recognition technology can be used in advertising to identify customer em
 Overall Impact
 Facial recognition technology has the potential to revolutionize a wide range of industries, from customer experience to healthcare to security. By accurately identifying emotions and reactions, businesses and organizations can better meet the needs and preferences of their customers and clients. As the technology continues to evolve and become more sophisticated, we can expect to see even more applications of facial recognition technology in the future.
 
-Learn More
+# Learn More
 To learn more about this project and my other work, please visit my portfolio website.
 
 ## Acknowledgments
