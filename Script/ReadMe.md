@@ -1,65 +1,83 @@
-# AlexNet for Image Classification
+# Image Classification using AlexNet
 
-Facial Recognition with AlexNet
+This script provides a simple interface for training an image classification model using AlexNet and classifying new images using the trained model. The script assumes that the data is organized in the following format:
 
-This script trains an AlexNet model on a custom image dataset and can be used to classify new images. The model is trained to recognize emotions and distinguish between happy and sad facial expressions.
+```
+data_dir/
+├── train/
+│   ├── class_1/
+│   │   ├── image_1.jpg
+│   │   ├── image_2.jpg
+│   │   ├── ...
+│   ├── class_2/
+│   │   ├── image_1.jpg
+│   │   ├── image_2.jpg
+│   │   ├── ...
+│   ├── ...
+├── valid/
+│   ├── class_1/
+│   │   ├── image_1.jpg
+│   │   ├── image_2.jpg
+│   │   ├── ...
+│   ├── class_2/
+│   │   ├── image_1.jpg
+│   │   ├── image_2.jpg
+│   │   ├── ...
+│   ├── ...
+```
 
-## Background
-
-Facial recognition has become increasingly important in various fields, from commerce to marketing, to identify human emotions and reactions to certain products or stimuli. By using deep learning techniques such as image recognition, companies can gain insight into how customers react to their products, and adjust their marketing strategies accordingly.
+Each class is represented by a directory in `train/` and `valid/`. The images for each class are stored in their respective directories. The script will split the images into training and validation sets based on the percentage split entered by the user.
 
 ## Requirements
 
-- Python 3.6+
-- PyTorch
-- torchvision
-- requests
-- tqdm
+To run this script, you will need:
 
-## Getting Started
+1. Python 3.x
+2. PyTorch
+3. torchvision
+4. tqdm
 
-1. Clone the repository
+You can install PyTorch and torchvision using `pip`:
 
-    ```
-    git clone https://github.com/[username]/AlexNet-for-Image-Classification.git
-    cd AlexNet-for-Image-Classification
-    ```
+```sh
+pip install torch torchvision
+```
 
-2. Install the required packages
+You can install tqdm using `pip`:
 
-    ```
-    pip install -r requirements.txt
-    ```
+```sh
+pip install tqdm
+```
 
-3. Prepare your custom dataset by creating a directory containing your training data. The directory structure should be as follows:
+## How to use
 
-    ```
-    - train/
-        - class_1/
-            - image_1.jpg
-            - image_2.jpg
-            ...
-        - class_2/
-            - image_1.jpg
-            - image_2.jpg
-            ...
-        ...
-    ```
+### 1. Train a new model
 
-4. Train the model using the following command:
+To train a new model, follow the steps below:
 
-    ```
-    python alexnet.py --train <path_to_dataset>
-    ```
+1. Run the script.
+2. Select action number `1` to train a new model.
+3. Select the data directory containing the training images when prompted.
+4. If no model exists in the data directory, enter the percentage split for the training and validation datasets.
+5. Enter the number of epochs to train the model.
+6. The best model will be saved in the data directory as `alexnet_custom_model.pt`.
 
-5. Once the model is trained, classify new images using the following command:
+### 2. Classify a new image
 
-    ```
-    python alexnet.py --classify <path_to_image>
-    ```
+To classify a new image, follow the steps below:
 
-## Options
+1. Run the script.
+2. Select action number `2` to classify a new image.
+3. Select the data directory containing the training images when prompted.
+4. If no model exists in the data directory, you will be prompted to train a new model.
+5. Choose an image file from your computer or enter a URL to download the image.
+6. The predicted class label will be displayed.
 
-- `--train`: Train the model using the specified dataset.
-- `--classify`: Classify a new image using the trained model.
+### 3. Print model stats
 
+To print the training and validation accuracy of a trained model, follow the steps below:
+
+1. Run the script.
+2. Select action number `3` to print model stats.
+3. Select the data directory containing the training images when prompted.
+4. The training and validation accuracy of the trained model will be displayed.
