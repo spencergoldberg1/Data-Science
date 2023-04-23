@@ -1,4 +1,4 @@
-![FaceSence](FaceSense.png)
+![FaceSence](images/FaceSense.png)
 
 # FaceSense - Facial Recognition with AlexNet
 
