@@ -32,7 +32,7 @@ Facial recognition technology can be used to monitor patients in hospitals and c
 Security
 Facial recognition technology can be used in security applications to identify individuals and prevent fraud or unauthorized access. For example, facial recognition technology can be used to monitor access to high-security areas in buildings or to prevent identity theft. In airports, facial recognition technology is being used to identify potential security risks and prevent unauthorized individuals from entering restricted areas.
 
-<img src="images/security.jpg" alt="Security">
+<img src="https://diginomica.com/sites/default/files/images/2019-11/facial-recognition-threat.jpg" alt="Security">
 
 ## Advertising
 Facial recognition technology can be used in advertising to identify customer emotions and tailor advertising messages accordingly. For example, if a customer appears sad, the advertising message could be designed to improve mood or offer a discount on a product that is designed to lift spirits. Similarly, if a customer appears happy, the advertising message could be tailored to offer complementary products or to encourage additional purchases.
