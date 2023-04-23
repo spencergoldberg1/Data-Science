@@ -22,7 +22,7 @@ The model achieved an accuracy of 98% on the test set, demonstrating its effecti
 ## Retail
 Facial recognition technology can be used in retail to identify customers and track their behavior in stores. This can provide valuable insights into customer preferences and help businesses improve their marketing and sales strategies. For example, by analyzing customer emotions, retailers can identify which products are resonating with customers and which are not. This information can then be used to make changes to the store layout or product placement to better meet the needs and preferences of customers.
 
-<img src="images/retail.jpg" alt="Retail Store">
+<img src="https://gigasource.b-cdn.net/wp-content/uploads/2020/03/face-recognition-in-retail-store.jpg" alt="Retail Store">
 
 ## Healthcare
 Facial recognition technology can be used to monitor patients in hospitals and clinics. By analyzing facial expressions, healthcare professionals can gain insight into patient well-being and identify potential mental health concerns. For example, a patient who is displaying signs of stress or anxiety could be identified and provided with additional support or resources.
