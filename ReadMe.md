@@ -9,8 +9,8 @@ The motivation for this project was to explore the potential of deep learning te
 The dataset used for training and testing the model consists of images of happy and sad faces. The classes used were taken from the dataset that can be found [here](https://www.kaggle.com/datasets/chiragsoni/ferdata), and I only used the happy and sad image data for training.
 
 <div style="display:flex; justify-content:center; align-items:center; padding: 50px; margin: 0 auto;">
-  <img src="images/happy_face.jpg" alt="Happy Face" width="250" height="250" style="padding: 0px 20px;">
-  <img src="images/sad_face.jpg" alt="Sad Face" width="250" height="250" style="padding: 0px 20px;">
+  <img src="https://declutterthemind.com/wp-content/uploads/traitshappypeople.jpg.webp" alt="Happy Face" width="250" height="250" style="padding: 0px 20px;">
+  <img src="https://www.caldwellmemorial.org/app/files/public/dreamstime_m_169987253.jpg?size=default" alt="Sad Face" width="250" height="250" style="padding: 0px 20px;">
 </div>
 
 ## Methodology
