@@ -67,6 +67,53 @@ def create_train_test_folders(root_folder, split_percentage):
             dst_file = os.path.join(class_valid_dir, valid_file)
             shutil.copy(src_file, dst_file)
 
+def print_model_stats(model_path, data_dir):
+    # Check if the model file exists
+    if not os.path.exists(model_path):
+        print("No model exists. Try training a new model.")
+        return
+
+    # Load the model
+    model = torch.load(model_path)
+    model.to(device)
+
+    # Load the train and validation datasets
+    train_dir = os.path.join(data_dir, 'train')
+    train_dataset = datasets.ImageFolder(train_dir, transform=transform)
+    valid_dir = os.path.join(data_dir, 'valid')
+    valid_dataset = datasets.ImageFolder(valid_dir, transform=transform)
+
+    # Create data loaders
+    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle=True)
+    valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=64, shuffle=False)
+
+    # Evaluate the model on the train set
+    model.eval()
+    train_correct = 0
+    train_total = 0
+    with torch.no_grad(), tqdm(train_loader, desc='Evaluating on train set') as train_bar:
+        for images, labels in train_bar:
+            images, labels = images.to(device), labels.to(device)
+            outputs = model(images)
+            _, predicted = torch.max(outputs.data, 1)
+            train_total += labels.size(0)
+            train_correct += (predicted == labels).sum().item()
+        train_acc = train_correct / train_total
+        print('Training Accuracy: {:.2f}%'.format(train_acc * 100))
+
+    # Evaluate the model on the validation set
+    valid_correct = 0
+    valid_total = 0
+    with torch.no_grad(), tqdm(valid_loader, desc='Evaluating on validation set') as valid_bar:
+        for images, labels in valid_bar:
+            images, labels = images.to(device), labels.to(device)
+            outputs = model(images)
+            _, predicted = torch.max(outputs.data, 1)
+            valid_total += labels.size(0)
+            valid_correct += (predicted == labels).sum().item()
+        valid_acc = valid_correct / valid_total
+        print('Validation Accuracy: {:.2f}%'.format(valid_acc * 100))
+
 def classify():
     model = torch.load(model_path)
     model.to(device)
@@ -230,7 +277,7 @@ def train_model(data_dir, device):
 
 
 
-action = int(input("Select an action:\n1. Train model\n2. Classify image\nEnter action number: "))
+action = int(input("Select an action:\n1. Train model\n2. Classify image\n3. Print model stats\nEnter action number: "))
 
 if action == 1:
     # Train the model
@@ -247,5 +294,9 @@ elif action == 2:
         classify()
     else:
         classify()
+elif action == 3:
+    # Print model stats
+    model_path = os.path.join(data_dir, "alexnet_custom_model.pt")
+    print_model_stats(model_path, data_dir)
 else:
     print("Invalid action selected.")
