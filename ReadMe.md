@@ -10,7 +10,7 @@ The dataset used for training and testing the model consists of images of happy 
 
 <div style="display:flex; justify-content:center; align-items:center; padding: 50px; margin: 0 auto;">
   <img src="https://declutterthemind.com/wp-content/uploads/traitshappypeople.jpg.webp" alt="Happy Face" width="250" height="250" style="padding: 0px 20px;">
-  <img src="https://www.caldwellmemorial.org/app/files/public/dreamstime_m_169987253.jpg?size=default" alt="Sad Face" width="250" height="250" style="padding: 0px 20px;">
+  <img src="https://health.wyo.gov/wp-content/uploads/2020/08/sad-man-sitting-in-hoodie.jpg" alt="Sad Face" width="250" height="250" style="padding: 0px 20px;">
 </div>
 
 ## Methodology
