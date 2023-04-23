@@ -8,7 +8,10 @@ The motivation for this project was to explore the potential of deep learning te
 Dataset
 The dataset used for training and testing the model consists of 10,000 labeled images of faces displaying happy or sad expressions. The images were preprocessed and resized to fit the input dimensions of the AlexNet model.
 
-<img src="images/sample_faces.png" alt="Sample Faces">
+<div style="display:flex; justify-content:center; align-items:center; padding: 50px; margin: 0 auto;">
+  <img src="images/happy_face.jpg" alt="Happy Face" width="250" height="250" style="padding: 0px 20px;">
+  <img src="images/sad_face.jpg" alt="Sad Face" width="250" height="250" style="padding: 0px 20px;">
+</div>
 Methodology
 The model was implemented using the PyTorch library and the AlexNet architecture, which has been shown to be effective in image classification tasks. The network consists of five convolutional layers and three fully connected layers, with ReLU activation and dropout regularization to prevent overfitting. The model was trained on a GPU for 100 epochs, achieving an accuracy of 98% on the test set.
 
@@ -27,12 +30,19 @@ Security
 Facial recognition technology can be used in security applications to identify individuals and prevent fraud or unauthorized access. For example, facial recognition technology can be used to monitor access to high-security areas in buildings or to prevent identity theft. In airports, facial recognition technology is being used to identify potential security risks and prevent unauthorized individuals from entering restricted areas.
 
 <img src="images/security.jpg" alt="Security">
+
 Advertising
 Facial recognition technology can be used in advertising to identify customer emotions and tailor advertising messages accordingly. For example, if a customer appears sad, the advertising message could be designed to improve mood or offer a discount on a product that is designed to lift spirits. Similarly, if a customer appears happy, the advertising message could be tailored to offer complementary products or to encourage additional purchases.
 
 <img src="images/advertising.jpg" alt="Advertising">
+Overall Impact
+Facial recognition technology has the potential to revolutionize a wide range of industries, from customer experience to healthcare to security. By accurately identifying emotions and reactions, businesses and organizations can better meet the needs and preferences of their customers and clients. As the technology continues to evolve and become more sophisticated, we can expect to see even more applications of facial recognition technology in the future.
+
 Learn More
 To learn more about this project and my other work, please visit my portfolio website.
 
 Acknowledgments
-Special thanks to the Kaggle community for providing the Facial Expression Recognition Dataset
+Special thanks to the Kaggle community for providing the Facial Expression Recognition Dataset used in this project. Additionally, thanks to the PyTorch team for creating a powerful and easy-to-use deep learning library.
+
+About FaceSense
+FaceSense is a project aimed at understanding people and how they interact with the world. By understanding someone's true emotion, it will help not only in making better product and advertisement recommendations based on how they are feeling but can also help marketers target their ads to the desired audience.
