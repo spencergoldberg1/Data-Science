@@ -216,7 +216,7 @@ def train_model(data_dir, device):
             if valid_acc > best_valid_acc:
                 best_valid_acc = valid_acc
                 best_model = model
-                print('Best model updated. Validation Accuracy: {:.2f}%'.format(best_valid_acc))
+                print('Best model updated. Validation Accuracy: {:.2f}%'.format(valid_acc * 100))
         # Save the best model to the file path
         if best_model is not None:
             torch.save(best_model, model_path)
