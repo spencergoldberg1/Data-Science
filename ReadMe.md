@@ -42,7 +42,7 @@ Overall Impact
 Facial recognition technology has the potential to revolutionize a wide range of industries, from customer experience to healthcare to security. By accurately identifying emotions and reactions, businesses and organizations can better meet the needs and preferences of their customers and clients. As the technology continues to evolve and become more sophisticated, we can expect to see even more applications of facial recognition technology in the future.
 
 # Learn More
-To learn more about this project and my other work, please visit my portfolio website.
+To learn more about this project and my other work, please visit [my portfolio website](https://spencergoldberg1.github.io/Portfolio-Website/).
 
 ## Acknowledgments
 Special thanks to the Kaggle community for providing the Facial Expression Recognition Dataset used in this project. Additionally, thanks to the PyTorch team for creating a powerful and easy-to-use deep learning library.
