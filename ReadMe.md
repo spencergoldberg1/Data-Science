@@ -27,7 +27,7 @@ Facial recognition technology can be used in retail to identify customers and tr
 ## Healthcare
 Facial recognition technology can be used to monitor patients in hospitals and clinics. By analyzing facial expressions, healthcare professionals can gain insight into patient well-being and identify potential mental health concerns. For example, a patient who is displaying signs of stress or anxiety could be identified and provided with additional support or resources.
 
-## <img src="images/healthcare.jpg" alt="Healthcare">
+## <img src="https://d3i71xaburhd42.cloudfront.net/26e1cc41b622a49c11b413fce83d8b2169664c0a/4-Figure4-1.png" alt="Healthcare">
 
 Security
 Facial recognition technology can be used in security applications to identify individuals and prevent fraud or unauthorized access. For example, facial recognition technology can be used to monitor access to high-security areas in buildings or to prevent identity theft. In airports, facial recognition technology is being used to identify potential security risks and prevent unauthorized individuals from entering restricted areas.
@@ -37,7 +37,7 @@ Facial recognition technology can be used in security applications to identify i
 ## Advertising
 Facial recognition technology can be used in advertising to identify customer emotions and tailor advertising messages accordingly. For example, if a customer appears sad, the advertising message could be designed to improve mood or offer a discount on a product that is designed to lift spirits. Similarly, if a customer appears happy, the advertising message could be tailored to offer complementary products or to encourage additional purchases.
 
-## <img src="images/advertising.jpg" alt="Advertising">
+## <img src="https://www.noldus.com/static/images/core-blog/persuasion-advertisements-facial-expresssion-1601906960.jpg" alt="Advertising">
 Overall Impact
 Facial recognition technology has the potential to revolutionize a wide range of industries, from customer experience to healthcare to security. By accurately identifying emotions and reactions, businesses and organizations can better meet the needs and preferences of their customers and clients. As the technology continues to evolve and become more sophisticated, we can expect to see even more applications of facial recognition technology in the future.
 
